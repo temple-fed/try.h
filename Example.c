@@ -12,7 +12,7 @@ int SubRiksy2(void){
 int Risky2(void){
    int Result;
    
-   tryret(Result, SubRisky2());
+   tryretv(Result, SubRisky2());
 }
 
 int main(void){
