@@ -11,12 +11,13 @@
 #   define __TRY_SUCCESS__   (0)
 #endif
 
-#define try                      do
-#define tryfailed(error)         (error != __TRY_SUCCESS__)
-#define tryret(error, result)    error = (result); if (tryfailed(error)) return
-#define tryretv(error, result)   error = (result); if (tryfailed(error)) return error
-#define trycall(error, result)   error = (result); if (tryfailed(error)) break
-#define catch(error)             while (0);        if (tryfailed(error))
+#define try                            do
+#define tryfailed(error)              (error != __TRY_SUCCESS__)
+#define tryret(error, result)          error = (result); if (tryfailed(error)) return
+#define tryretv(error, result)         error = (result); if (tryfailed(error)) return error
+#define trygoto(error, result, label)  error = (result); if (tryfailed(error)) goto label
+#define trycall(error, result)         error = (result); if (tryfailed(error)) break
+#define catch(error)                   while (0);        if (tryfailed(error))
 
 /*  Example usage:
 *   
