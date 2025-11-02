@@ -37,6 +37,8 @@
 *      return 0;
 *   }
 *   
+*   Notes:
+*   tryret, tryretv and trygoto are not meant to be used within a try-catch 'block'.
 */
 
 #endif /*   __TRY_H__ EOF   */
