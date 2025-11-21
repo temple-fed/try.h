@@ -13,6 +13,7 @@ int Risky2(void){
    int Result;
    
    tryretv(Result, SubRisky2());
+   return 0;
 }
 
 int main(void){
