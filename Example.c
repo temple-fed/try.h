@@ -10,22 +10,22 @@ int SubRiksy2(void){
 }
 
 int Risky2(void){
-   int Result;
+   int result;
    
-   tryretv(Result, SubRisky2());
+   tryretv(result, SubRisky2());
    return 0;
 }
 
 int main(void){
-   int Error;
+   int error;
    
    try {
-      trycall(Error, Risky1());
-      trycall(Error, Risky1());
+      trycall(error, Risky1());
+      trycall(error, Risky1());
    }
    catch(Error){
-      printf("failed with error %d\n", Error);
-      return Error;
+      printf("failed with error %d\n", error);
+      return error;
    }
    
    /*...*/
